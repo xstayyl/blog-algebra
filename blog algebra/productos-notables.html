@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos Notables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eeeeff;
+      color: #222;
+      width: 85%;
+      max-width: 900px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    h1,
+    h2 {
+      color: #222b63;
+    }
+
+    section {
+      margin: 28px 0;
+    }
+
+    .formula {
+      font-family: "Courier New", monospace;
+      font-size: 1.05rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #222;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #d5f2fa;
+    }
+
+    a {
+      color: #222b63;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Volver al inicio</a></p>
+
+  <h1>Productos Notables</h1>
+  <p>
+    Los productos notables son multiplicaciones que siguen reglas conocidas.
+    Estas reglas ayudan a resolver más rápido sin hacer toda la multiplicación desde cero.
+  </p>
+
+  <section>
+    <h2>1. Binomio al cuadrado</h2>
+    <p>
+      Un binomio al cuadrado se obtiene multiplicando el primer término por sí mismo,
+      después sumando o restando el doble del producto de los dos términos y finalmente
+      agregando el segundo término al cuadrado.
+    </p>
+    <p class="formula">(a + b)² = a² + 2ab + b²</p>
+
+    <h3>Ejemplo: (x + 4)²</h3>
+    <ol>
+      <li>Primer término al cuadrado: x².</li>
+      <li>Doble del producto: 2(x)(4) = 8x.</li>
+      <li>Segundo término al cuadrado: 4² = 16.</li>
+      <li>Resultado: x² + 8x + 16.</li>
+    </ol>
+
+    <h3>Comprobación con tabla</h3>
+    <table>
+      <tr><th>×</th><th>x</th><th>4</th></tr>
+      <tr><th>x</th><td>x²</td><td>4x</td></tr>
+      <tr><th>4</th><td>4x</td><td>16</td></tr>
+    </table>
+    <p>Suma de la tabla: x² + 4x + 4x + 16 = <strong>x² + 8x + 16</strong>.</p>
+  </section>
+
+  <section>
+    <h2>2. Binomio al cubo</h2>
+    <p>
+      En un binomio al cubo aparecen cuatro términos: el primer término al cubo,
+      menos o más tres veces el primer término al cuadrado por el segundo,
+      tres veces el primero por el segundo al cuadrado y el segundo al cubo.
+    </p>
+    <p class="formula">(a - b)³ = a³ - 3a²b + 3ab² - b³</p>
+
+    <h3>Ejemplo: (2x - 3)³</h3>
+    <ol>
+      <li>(2x)³ = 8x³.</li>
+      <li>-3(2x)²(3) = -36x².</li>
+      <li>3(2x)(3²) = 54x.</li>
+      <li>-3³ = -27.</li>
+      <li>Resultado: 8x³ - 36x² + 54x - 27.</li>
+    </ol>
+
+    <h3>Comprobación con tablas</h3>
+    <p>Primero comprobamos el cuadrado:</p>
+    <table>
+      <tr><th>×</th><th>2x</th><th>-3</th></tr>
+      <tr><th>2x</th><td>4x²</td><td>-6x</td></tr>
+      <tr><th>-3</th><td>-6x</td><td>9</td></tr>
+    </table>
+    <p>(2x - 3)² = 4x² - 12x + 9.</p>
+
+    <p>Ahora multiplicamos ese resultado por (2x - 3):</p>
+    <table>
+      <tr><th>×</th><th>2x</th><th>-3</th></tr>
+      <tr><th>4x²</th><td>8x³</td><td>-12x²</td></tr>
+      <tr><th>-12x</th><td>-24x²</td><td>36x</td></tr>
+      <tr><th>9</th><td>18x</td><td>-27</td></tr>
+    </table>
+    <p>Suma: <strong>8x³ - 36x² + 54x - 27</strong>.</p>
+  </section>
+
+  <section>
+    <h2>3. Binomios con término común</h2>
+    <p>
+      Cuando dos binomios tienen el mismo primer término, se eleva ese término al cuadrado,
+      se suman los números que lo acompañan y se multiplica por el término común.
+      Al final se multiplican los dos números.
+    </p>
+    <p class="formula">(x + a)(x + b) = x² + (a + b)x + ab</p>
+
+    <h3>Ejemplo: (x + 6)(x - 2)</h3>
+    <ol>
+      <li>Término común al cuadrado: x².</li>
+      <li>Suma de los números: 6 + (-2) = 4, entonces queda 4x.</li>
+      <li>Multiplicación de los números: 6(-2) = -12.</li>
+      <li>Resultado: x² + 4x - 12.</li>
+    </ol>
+
+    <h3>Comprobación con tabla</h3>
+    <table>
+      <tr><th>×</th><th>x</th><th>-2</th></tr>
+      <tr><th>x</th><td>x²</td><td>-2x</td></tr>
+      <tr><th>6</th><td>6x</td><td>-12</td></tr>
+    </table>
+    <p>Suma: x² - 2x + 6x - 12 = <strong>x² + 4x - 12</strong>.</p>
+  </section>
+
+  <section>
+    <h2>4. Binomios conjugados</h2>
+    <p>
+      Los binomios conjugados tienen los mismos términos, pero uno tiene suma y el otro resta.
+      El resultado es el primer término al cuadrado menos el segundo término al cuadrado.
+    </p>
+    <p class="formula">(a + b)(a - b) = a² - b²</p>
+
+    <h3>Ejemplo: (3y + 5)(3y - 5)</h3>
+    <ol>
+      <li>Primer término al cuadrado: (3y)² = 9y².</li>
+      <li>Segundo término al cuadrado: 5² = 25.</li>
+      <li>Como son conjugados, se restan.</li>
+      <li>Resultado: 9y² - 25.</li>
+    </ol>
+
+    <h3>Comprobación con tabla</h3>
+    <table>
+      <tr><th>×</th><th>3y</th><th>-5</th></tr>
+      <tr><th>3y</th><td>9y²</td><td>-15y</td></tr>
+      <tr><th>5</th><td>15y</td><td>-25</td></tr>
+    </table>
+    <p>Suma: 9y² - 15y + 15y - 25 = <strong>9y² - 25</strong>.</p>
+  </section>
+</body>
+</html>

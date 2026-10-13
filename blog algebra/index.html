@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog matemático interactivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eeeeff;
+      color: #222;
+      width: 85%;
+      max-width: 850px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: #222b63;
+      cursor: pointer;
+    }
+
+    h2 {
+      color: #222b63;
+    }
+
+    section {
+      margin: 18px 0;
+    }
+
+    details {
+      margin: 10px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #222;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #d5f2fa;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Blog matemático interactivo</h1>
+  <p>
+    <a href="productos-notables.html">Nueva entrada: Productos Notables</a>
+  </p>
+  <section>
+    <h2>Clasificación de los números reales</h2>
+    <p>Los números reales se pueden colocar en una recta numérica.</p>
+
+    <details open>
+      <summary>Conjuntos numéricos</summary>
+      <ol>
+        <li>Naturales: 1, 2, 3, 4...</li>
+        <li>Enteros: ..., -2, -1, 0, 1, 2...</li>
+        <li>Racionales: se pueden escribir como fracción, por ejemplo 1/2.</li>
+        <li>Irracionales: no se pueden escribir como fracción exacta, por ejemplo π.</li>
+        <li>Reales: incluyen racionales e irracionales.</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>Ejemplos</summary>
+      <ul>
+        <li>7 pertenece a N, Z, Q y R.</li>
+        <li>-3/4 pertenece a Q y R.</li>
+        <li>π pertenece a I y R.</li>
+        <li>|-5| = 5 porque es la distancia al cero.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Recta numérica</summary>
+      <p>-3 &nbsp; -2 &nbsp; -1 &nbsp; 0 &nbsp; 1 &nbsp; 2 &nbsp; 3</p>
+      <p>El número que está más a la derecha es el mayor. Por eso, -1 &lt; 2.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Operaciones con signos</h2>
+    <ul>
+      <li>En suma y resta, signos iguales se suman.</li>
+      <li>En suma y resta, signos diferentes se restan.</li>
+      <li>En multiplicación y división, signos iguales dan positivo.</li>
+      <li>En multiplicación y división, signos diferentes dan negativo.</li>
+    </ul>
+    <p><strong>Ejemplo:</strong> (-6) × (-5) = +30</p>
+
+    <h3>Orden de las operaciones</h3>
+    <ol>
+      <li>Paréntesis.</li>
+      <li>Exponentes.</li>
+      <li>Multiplicación y división.</li>
+      <li>Suma y resta.</li>
+    </ol>
+  </section>
+
+  <script>
+    const titulo = document.getElementById('titulo');
+
+    titulo.addEventListener('click', () => {
+      const numeroAleatorio = Math.floor(Math.random() * 16777215);
+      const color = '#' + numeroAleatorio
+        .toString(16)
+        .padStart(6, '0');
+
+      document.body.style.backgroundColor = color;
+    });
+  </script>
+</body>
+</html>
