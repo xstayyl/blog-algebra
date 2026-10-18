@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorización I</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eeeeff;
+      color: #222;
+      width: 85%;
+      max-width: 900px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    h1,
+    h2 {
+      color: #222b63;
+    }
+
+    section {
+      margin: 28px 0;
+    }
+
+    .formula {
+      font-family: "Courier New", monospace;
+      font-size: 1.05rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #222;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #d5f2fa;
+    }
+
+    a {
+      color: #222b63;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Volver al inicio</a></p>
+
+  <h1>Factorización I</h1>
+  <p>
+    Factorizar es convertir una suma o una resta en una multiplicación.
+    Por eso se dice que es el proceso inverso de desarrollar productos notables.
+  </p>
+
+  <section>
+    <h2>1. Factor común</h2>
+    <p>
+      Se reconoce porque todos los términos tienen algo que se repite, como un número,
+      una letra o las dos cosas. Ese elemento se coloca fuera del paréntesis.
+    </p>
+    <p>
+      Para hacerlo, busco el máximo factor que se pueda dividir entre todos los términos.
+      Después divido cada término entre ese factor y escribo los resultados dentro del paréntesis.
+    </p>
+
+    <h3>Ejemplo: 12x³ - 18x²</h3>
+    <ol>
+      <li>El número común más grande es 6 y la menor potencia de x es x².</li>
+      <li>El factor común es 6x².</li>
+      <li>12x³ ÷ 6x² = 2x y 18x² ÷ 6x² = 3.</li>
+      <li>Resultado: <strong>12x³ - 18x² = 6x²(2x - 3)</strong>.</li>
+    </ol>
+
+    <h3>Comprobación multiplicando de regreso</h3>
+    <p>
+      6x²(2x - 3) = 6x²(2x) - 6x²(3) = 12x³ - 18x².
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Trinomio cuadrado perfecto</h2>
+    <p>
+      Tiene tres términos. El primero y el último son cuadrados perfectos, y el término de en medio
+      es el doble de multiplicar sus raíces cuadradas.
+    </p>
+    <p>
+      Saco la raíz del primer y del tercer término. Luego reviso si el término de en medio coincide
+      con el doble de esas raíces. Si coincide, escribo un binomio al cuadrado.
+    </p>
+    <p class="formula">a² + 2ab + b² = (a + b)²</p>
+
+    <h3>Ejemplo: x² + 14x + 49</h3>
+    <ol>
+      <li>La raíz de x² es x y la raíz de 49 es 7.</li>
+      <li>Compruebo el término de en medio: 2(x)(7) = 14x.</li>
+      <li>Como coincide, el trinomio es perfecto.</li>
+      <li>Resultado: <strong>x² + 14x + 49 = (x + 7)²</strong>.</li>
+    </ol>
+
+    <h3>Comprobación multiplicando de regreso</h3>
+    <p>
+      (x + 7)² = (x + 7)(x + 7) = x² + 7x + 7x + 49 = x² + 14x + 49.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Diferencia de cuadrados</h2>
+    <p>
+      Se reconoce porque hay dos términos restándose y ambos son cuadrados perfectos.
+      No funciona igual si hay una suma.
+    </p>
+    <p>
+      Saco la raíz cuadrada de cada término. Después formo dos paréntesis: uno con suma
+      y otro con resta de esas raíces.
+    </p>
+    <p class="formula">a² - b² = (a + b)(a - b)</p>
+
+    <h3>Ejemplo: 25m² - 64</h3>
+    <ol>
+      <li>La raíz de 25m² es 5m y la raíz de 64 es 8.</li>
+      <li>Como hay una resta entre dos cuadrados, uso suma y resta.</li>
+      <li>Resultado: <strong>25m² - 64 = (5m + 8)(5m - 8)</strong>.</li>
+    </ol>
+
+    <h3>Comprobación multiplicando de regreso</h3>
+    <p>
+      (5m + 8)(5m - 8) = 25m² - 40m + 40m - 64 = 25m² - 64.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ida y regreso</h2>
+    <p>
+      Factorizar es hacer el camino de regreso: parto de una expresión desarrollada
+      y la convierto en factores. Si multiplico esos factores, regreso a la expresión original.
+    </p>
+    <table>
+      <tr>
+        <th>Factorización</th>
+        <th>Producto notable relacionado</th>
+      </tr>
+      <tr>
+        <td>Trinomio cuadrado perfecto</td>
+        <td>Binomio al cuadrado: (a + b)² = a² + 2ab + b²</td>
+      </tr>
+      <tr>
+        <td>Diferencia de cuadrados</td>
+        <td>Binomios conjugados: (a + b)(a - b) = a² - b²</td>
+      </tr>
+      <tr>
+        <td>Factor común</td>
+        <td>Propiedad distributiva: a(b + c) = ab + ac</td>
+      </tr>
+    </table>
+  </section>
+</body>
+</html>
