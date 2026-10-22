@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorización II</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eeeeff;
+      color: #222;
+      width: 85%;
+      max-width: 900px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    h1,
+    h2 {
+      color: #222b63;
+    }
+
+    section {
+      margin: 28px 0;
+    }
+
+    .formula {
+      font-family: "Courier New", monospace;
+      font-size: 1.05rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #222;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #d5f2fa;
+    }
+
+    a {
+      color: #222b63;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Volver al inicio</a></p>
+
+  <h1>Factorización II</h1>
+  <p>
+    En esta entrada continúo con otros casos de factorización. La idea es observar
+    la forma del polinomio para elegir el procedimiento que corresponde.
+  </p>
+
+  <section>
+    <h2>1. Suma y diferencia de cubos</h2>
+    <p>
+      Se reconoce porque hay dos términos y los dos son cubos perfectos. Si están sumando,
+      es una suma de cubos; si están restando, es una diferencia de cubos.
+    </p>
+    <p>
+      Primero saco la raíz cúbica de cada término. Después uso dos factores: el primero
+      es un binomio con esas raíces y el segundo tiene tres términos.
+    </p>
+    <p class="formula">a³ + b³ = (a + b)(a² - ab + b²)</p>
+    <p class="formula">a³ - b³ = (a - b)(a² + ab + b²)</p>
+
+    <h3>Ejemplo: 8x³ + 125</h3>
+    <ol>
+      <li>La raíz cúbica de 8x³ es 2x y la de 125 es 5.</li>
+      <li>Es una suma, así que el primer factor es (2x + 5).</li>
+      <li>El segundo factor queda (4x² - 10x + 25).</li>
+      <li>Resultado: <strong>8x³ + 125 = (2x + 5)(4x² - 10x + 25)</strong>.</li>
+    </ol>
+
+    <h3>Comprobación multiplicando de regreso</h3>
+    <p>
+      (2x + 5)(4x² - 10x + 25) = 8x³ - 20x² + 50x + 20x² - 50x + 125
+      = <strong>8x³ + 125</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Trinomio x² + bx + c</h2>
+    <p>
+      Tiene tres términos y el coeficiente del primer término es 1. Para reconocerlo,
+      busco dos números que al multiplicarse den c y al sumarse den b.
+    </p>
+    <p>
+      Esos dos números se convierten en los términos de los paréntesis. Reviso los signos
+      para que la suma y el producto coincidan con el trinomio original.
+    </p>
+
+    <h3>Ejemplo: x² + 9x + 20</h3>
+    <ol>
+      <li>Necesito dos números que multiplicados den 20 y sumados den 9.</li>
+      <li>Esos números son 4 y 5, porque 4 · 5 = 20 y 4 + 5 = 9.</li>
+      <li>Resultado: <strong>x² + 9x + 20 = (x + 4)(x + 5)</strong>.</li>
+    </ol>
+
+    <h3>Comprobación multiplicando de regreso</h3>
+    <p>
+      (x + 4)(x + 5) = x² + 5x + 4x + 20 = <strong>x² + 9x + 20</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Trinomio ax² + bx + c: aspa simple</h2>
+    <p>
+      Aquí el primer término tiene un número diferente de 1. Para reconocerlo,
+      hay tres términos y se necesita encontrar una forma de que los productos cruzados
+      sumen el término de en medio.
+    </p>
+    <p>
+      En el aspa simple busco dos factores para el primer término y dos para el último.
+      Después pruebo los productos cruzados hasta que su suma sea el término de en medio.
+    </p>
+
+    <h3>Ejemplo: 6x² + 11x + 3</h3>
+    <ol>
+      <li>Para 6x² puedo usar 3x y 2x. Para 3 puedo usar 1 y 3.</li>
+      <li>Pruebo los productos cruzados: 3x · 3 = 9x y 2x · 1 = 2x.</li>
+      <li>La suma es 9x + 2x = 11x, que coincide con el término de en medio.</li>
+      <li>Resultado: <strong>6x² + 11x + 3 = (3x + 1)(2x + 3)</strong>.</li>
+    </ol>
+
+    <h3>Comprobación multiplicando de regreso</h3>
+    <p>
+      (3x + 1)(2x + 3) = 6x² + 9x + 2x + 3 = <strong>6x² + 11x + 3</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Estrategia de factorización</h2>
+    <p>
+      Para decidir qué método usar, sigo estos pasos:
+    </p>
+    <ol>
+      <li>Primero reviso si todos los términos tienen un factor común.</li>
+      <li>Si hay dos términos, compruebo si son cubos perfectos.</li>
+      <li>Si hay tres términos y empieza con x², busco el trinomio x² + bx + c.</li>
+      <li>Si hay tres términos y empieza con ax², uso el aspa simple.</li>
+      <li>Al final multiplico los factores para comprobar que regreso al polinomio original.</li>
+    </ol>
+    <p>
+      La cantidad de términos ayuda a orientarme, pero siempre debo revisar los productos
+      y los signos antes de decidir que la factorización está completa.
+    </p>
+  </section>
+</body>
+</html>
