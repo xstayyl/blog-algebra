@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecuaciones de Primer Grado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eeeeff;
+      color: #222;
+      width: 85%;
+      max-width: 900px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    h1,
+    h2 {
+      color: #222b63;
+    }
+
+    section {
+      margin: 28px 0;
+    }
+
+    .formula {
+      font-family: "Courier New", monospace;
+      font-size: 1.05rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 12px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #222;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #d5f2fa;
+    }
+
+    a {
+      color: #222b63;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Volver al inicio</a></p>
+
+  <h1>Ecuaciones de Primer Grado</h1>
+  <p>
+    Una ecuación de primer grado es una igualdad en la que la incógnita no tiene exponentes
+    mayores que uno. Resolverla significa encontrar el valor que hace verdadera la igualdad.
+  </p>
+
+  <section>
+    <h2>Procedimiento general</h2>
+    <p>Para resolver una ecuación sigo estos pasos:</p>
+    <ol>
+      <li>Identifico la incógnita y simplifico las operaciones que se puedan hacer.</li>
+      <li>Dejo los términos con la incógnita en un lado y los números en el otro.</li>
+      <li>Cuando un término cambia de lado, cambia su signo.</li>
+      <li>Despejo la incógnita dividiendo entre el número que la acompaña.</li>
+      <li>Sustituyo el resultado en la ecuación original para comprobarlo.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>1. Ecuación entera</h2>
+    <p>
+      Se reconoce porque los números y la incógnita aparecen como números enteros, sin fracciones.
+    </p>
+
+    <h3>Ejemplo: 3x + 5 = 20</h3>
+    <ol>
+      <li>Resto 5 en ambos lados: 3x = 15.</li>
+      <li>Divido entre 3: x = 5.</li>
+      <li>Solución: <strong>x = 5</strong>.</li>
+    </ol>
+
+    <h3>Comprobación</h3>
+    <p>3(5) + 5 = 15 + 5 = <strong>20</strong>.</p>
+  </section>
+
+  <section>
+    <h2>2. Ecuación fraccionaria</h2>
+    <p>
+      Tiene fracciones o denominadores. Para hacerla más sencilla, puedo multiplicar toda la ecuación
+      por el denominador común y después continuar como una ecuación normal.
+    </p>
+
+    <h3>Ejemplo: 3x/4 + 2 = 11</h3>
+    <ol>
+      <li>Resto 2 en ambos lados: 3x/4 = 9.</li>
+      <li>Multiplico por 4: 3x = 36.</li>
+      <li>Divido entre 3: x = 12.</li>
+      <li>Solución: <strong>x = 12</strong>.</li>
+    </ol>
+
+    <h3>Comprobación</h3>
+    <p>3(12)/4 + 2 = 36/4 + 2 = 9 + 2 = <strong>11</strong>.</p>
+  </section>
+
+  <section>
+    <h2>3. Ecuación con signos</h2>
+    <p>
+      Puede tener términos positivos y negativos. Lo importante es respetar las reglas de los signos
+      al pasar términos de un lado al otro y al dividir.
+    </p>
+
+    <h3>Ejemplo: -4x + 7 = 19</h3>
+    <ol>
+      <li>Resto 7 en ambos lados: -4x = 12.</li>
+      <li>Divido entre -4: x = -3.</li>
+      <li>Solución: <strong>x = -3</strong>.</li>
+    </ol>
+
+    <h3>Comprobación</h3>
+    <p>-4(-3) + 7 = 12 + 7 = <strong>19</strong>.</p>
+  </section>
+
+  <section>
+    <h2>4. Ecuación con literales</h2>
+    <p>
+      Además de la incógnita, aparecen letras que representan números conocidos. El procedimiento
+      es el mismo, pero la respuesta se expresa usando esas letras.
+    </p>
+
+    <h3>Ejemplo: ax + b = c</h3>
+    <ol>
+      <li>Resto b en ambos lados: ax = c - b.</li>
+      <li>Divido entre a, suponiendo que a no es cero: x = (c - b)/a.</li>
+      <li>Solución: <strong>x = (c - b)/a</strong>.</li>
+    </ol>
+
+    <h3>Comprobación</h3>
+    <p>
+      Sustituyo x: a((c - b)/a) + b = c - b + b = <strong>c</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Problema de planteamiento</h2>
+    <p>
+      Un programa de edición cobra una cuota fija de 80 pesos y 15 pesos por cada exportación de video.
+      Si al final pagué 185 pesos, ¿cuántos videos exporté?
+    </p>
+
+    <h3>Solución en cinco pasos</h3>
+    <ol>
+      <li><strong>Incógnita:</strong> x representa el número de videos exportados.</li>
+      <li><strong>Traducción:</strong> la cuota fija es 80 y cada exportación cuesta 15.</li>
+      <li><strong>Ecuación:</strong> 80 + 15x = 185.</li>
+      <li><strong>Solución:</strong> 15x = 105, por lo tanto x = 7.</li>
+      <li><strong>Validación:</strong> 80 + 15(7) = 80 + 105 = 185.</li>
+    </ol>
+    <p>
+      Por lo tanto, exporté <strong>7 videos</strong>. La respuesta tiene sentido porque es un número entero
+      y al sustituirlo se obtiene el total que decía el problema.
+    </p>
+  </section>
+</body>
+</html>
