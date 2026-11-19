@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Determinantes por cofactores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eeeeff;
+      color: #222;
+      width: 85%;
+      max-width: 900px;
+      margin: 30px auto;
+      line-height: 1.5;
+    }
+
+    h1,
+    h2 {
+      color: #222b63;
+    }
+
+    section {
+      margin: 28px 0;
+    }
+
+    .formula {
+      font-family: "Courier New", monospace;
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: #222b63;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">Volver al inicio</a></p>
+
+  <h1>Determinantes por cofactores</h1>
+  <p>
+    El determinante es un número asociado a una matriz cuadrada. En el graficador lo usamos
+    para conocer un valor de la matriz; por ejemplo, una matriz con determinante cero no tiene inversa.
+  </p>
+
+  <section>
+    <h2>¿Cómo se calcula?</h2>
+    <p>
+      Para una matriz de 2 × 2, multiplico los elementos de la diagonal principal y resto
+      el producto de la otra diagonal.
+    </p>
+    <p class="formula">|a b; c d| = ad - bc</p>
+    <p>
+      Para tamaños mayores, desarrollo por cofactores. Tomo una fila, multiplico cada elemento
+      por el determinante de su menor y alterno los signos. El menor se forma quitando la fila
+      y la columna donde está ese elemento. Repito el proceso hasta llegar a determinantes de 2 × 2.
+    </p>
+
+    <h2>Ejemplo de 2 × 2</h2>
+    <p class="formula">
+      A = [[4, 7], [2, 6]]<br>
+      det(A) = 4 · 6 - 7 · 2 = 24 - 14 = 10
+    </p>
+  </section>
+
+  <section>
+    <h2>Ejemplo de 3 × 3 por cofactores</h2>
+    <p class="formula">
+      A = [[1, 2, 0], [3, 1, 4], [2, -1, 5]]
+    </p>
+    <p>
+      Desarrollo por la primera fila. Los signos de esa fila son +, −, +:
+    </p>
+    <ol>
+      <li>Primer elemento: 1 · det([[1, 4], [-1, 5]]) = 1 · (5 + 4) = 9.</li>
+      <li>Segundo elemento: −2 · det([[3, 4], [2, 5]]) = −2 · (15 − 8) = −14.</li>
+      <li>Tercer elemento: +0 · det([[3, 1], [2, -1]]) = 0.</li>
+      <li>Sumo los resultados: 9 − 14 + 0 = <strong>−5</strong>.</li>
+    </ol>
+    <p>
+      Entonces, <strong>det(A) = −5</strong>. Como es distinto de cero, esta matriz sí tiene inversa.
+    </p>
+  </section>
+
+  <section>
+    <h2>Comprobación en el graficador</h2>
+    <ol>
+      <li>Abro el <a href="graficador.html">Graficador de Matrices</a>.</li>
+      <li>En el editor cargo la matriz, escribiendo un renglón por línea y separando valores con espacios.</li>
+      <li>Elijo la operación “Determinante” en la sección de Matriz A.</li>
+      <li>El resultado esperado para el ejemplo de 3 × 3 es −5.</li>
+    </ol>
+    <p>
+      El determinante solo existe para matrices cuadradas. Si intento usar una matriz rectangular,
+      el graficador muestra un mensaje de error.
+    </p>
+  </section>
+</body>
+</html>

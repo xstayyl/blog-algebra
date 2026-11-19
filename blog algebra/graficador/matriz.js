@@ -153,8 +153,39 @@ function multiplicar(A, B) {
 
 /** Determinante de una matriz 2 × 2:  ad − bc */
 function det2(T) {
-  // TODO Workshop 2
-  pendiente('det2', 'Workshop 2');
+  const [filas, columnas] = orden(T);
+  if (filas !== 2 || columnas !== 2) {
+    throw new Error('det2 requiere una matriz de 2 × 2.');
+  }
+  return T[0][0] * T[1][1] - T[0][1] * T[1][0];
+}
+
+/**
+ * Determinante de una matriz cuadrada de cualquier tamaño, por cofactores.
+ * Regresa un número y no modifica la matriz recibida.
+ */
+function determinante(A) {
+  if (!Array.isArray(A) || A.length === 0 ||
+      !A.every(renglon => Array.isArray(renglon) && renglon.length === A.length)) {
+    throw new Error('El determinante solo existe para matrices cuadradas.');
+  }
+
+  const n = A.length;
+  if (n === 1) {
+    return A[0][0];
+  }
+  if (n === 2) {
+    return det2(A);
+  }
+
+  let resultado = 0;
+  for (let j = 0; j < n; j++) {
+    const menor = A.slice(1).map(renglon =>
+      renglon.filter((_, columna) => columna !== j)
+    );
+    resultado += ((j % 2 === 0) ? 1 : -1) * A[0][j] * determinante(menor);
+  }
+  return resultado;
 }
 
 /**
